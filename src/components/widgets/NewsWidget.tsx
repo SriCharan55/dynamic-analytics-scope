@@ -84,10 +84,18 @@ const NewsWidget = () => {
 
   return (
     <Card className="dashboard-card animate-enter">
-      <CardHeader className="dashboard-card-header">
-        <CardTitle className="dashboard-card-title">Latest News</CardTitle>
-      </CardHeader>
-      <CardContent>
+      <CardContent className="pt-6">
+        <div className="flex justify-between items-center mb-6">
+          <CardTitle className="dashboard-card-title">Latest News</CardTitle>
+          <Button 
+            variant="link" 
+            onClick={() => window.open("https://news.google.com", "_blank")}
+            className="text-sm font-medium hover:underline flex items-center gap-1"
+          >
+            View All <ExternalLink className="h-3 w-3" />
+          </Button>
+        </div>
+        
         <div className="flex overflow-x-auto pb-2 mb-4 space-x-2 scrollbar-none">
           {categories.map((category) => (
             <button
@@ -103,6 +111,7 @@ const NewsWidget = () => {
             </button>
           ))}
         </div>
+
         <div className="space-y-4">
           {filteredNews?.slice(0, 4).map((article) => (
             <a 
@@ -115,33 +124,29 @@ const NewsWidget = () => {
               <div className="w-20 h-20 bg-gray-200 dark:bg-gray-700 rounded-md overflow-hidden flex-shrink-0">
                 <img 
                   src={article.imageUrl} 
-                  alt={article.title} 
+                  alt=""
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="flex-1">
-                <div className="flex justify-between items-start">
+                <div className="flex justify-between items-start gap-2">
                   <h4 className="font-medium text-gray-900 dark:text-white line-clamp-2">{article.title}</h4>
-                  <ExternalLink className="h-4 w-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ExternalLink className="h-4 w-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
                 </div>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  {article.source} · {article.date}
-                </p>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-xs font-medium text-primary-600 dark:text-primary-400">
+                    {article.source}
+                  </span>
+                  <span className="text-xs text-gray-500 dark:text-gray-400">
+                    · {article.date}
+                  </span>
+                </div>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">
                   {article.summary}
                 </p>
               </div>
             </a>
           ))}
-          <div className="text-center pt-2">
-            <Button 
-              variant="link" 
-              onClick={() => window.open("https://news.google.com", "_blank")}
-              className="text-sm font-medium hover:underline flex items-center gap-1"
-            >
-              View All News <ExternalLink className="h-3 w-3" />
-            </Button>
-          </div>
         </div>
       </CardContent>
     </Card>
