@@ -1,0 +1,111 @@
+
+// Mock weather data
+export const mockWeatherData = {
+  location: "New York, NY",
+  temperature: 72,
+  condition: "Sunny",
+  humidity: 45,
+  windSpeed: 8,
+  forecast: [
+    { date: "Mon", temperature: 72, condition: "Sunny" },
+    { date: "Tue", temperature: 75, condition: "Sunny" },
+    { date: "Wed", temperature: 68, condition: "Cloudy" },
+    { date: "Thu", temperature: 65, condition: "Rainy" },
+    { date: "Fri", temperature: 69, condition: "Cloudy" },
+    { date: "Sat", temperature: 72, condition: "Sunny" },
+    { date: "Sun", temperature: 74, condition: "Sunny" },
+  ],
+};
+
+// Mock finance data
+export const mockFinanceData = {
+  symbol: "AAPL",
+  name: "Apple Inc.",
+  currentPrice: 175.42,
+  change: 2.34,
+  changePercentage: 1.35,
+  high: 176.98,
+  low: 173.11,
+  volume: 68245000,
+  marketCap: "$2.79T",
+  historicalData: [
+    { date: "Jan", price: 150.42 },
+    { date: "Feb", price: 158.76 },
+    { date: "Mar", price: 165.32 },
+    { date: "Apr", price: 162.15 },
+    { date: "May", price: 157.89 },
+    { date: "Jun", price: 164.25 },
+    { date: "Jul", price: 167.78 },
+    { date: "Aug", price: 172.44 },
+    { date: "Sep", price: 169.37 },
+    { date: "Oct", price: 171.65 },
+    { date: "Nov", price: 169.82 },
+    { date: "Dec", price: 175.42 },
+  ],
+};
+
+// Mock news data
+export const mockNewsData = {
+  articles: [
+    {
+      id: "1",
+      title: "Apple unveils new product line with advanced AI capabilities",
+      source: "Tech News",
+      date: "2h ago",
+      summary: "Apple has unveiled its latest product line featuring advanced AI capabilities, setting a new standard in the tech industry.",
+      url: "#",
+      imageUrl: "https://images.unsplash.com/photo-1588702547919-26089e690ecc?q=80&w=200&h=200&auto=format&fit=crop",
+      category: "Technology",
+    },
+    {
+      id: "2",
+      title: "Global markets hit record highs amid economic recovery",
+      source: "Financial Times",
+      date: "5h ago",
+      summary: "Major stock indices have reached unprecedented levels as economic recovery accelerates worldwide.",
+      url: "#",
+      imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=200&h=200&auto=format&fit=crop",
+      category: "Business",
+    },
+    {
+      id: "3",
+      title: "New study reveals breakthrough in cancer treatment research",
+      source: "Health Journal",
+      date: "1d ago",
+      summary: "Scientists have made a significant discovery that could revolutionize how cancer treatments are developed and administered.",
+      url: "#",
+      imageUrl: "https://images.unsplash.com/photo-1576671081837-49000212a370?q=80&w=200&h=200&auto=format&fit=crop",
+      category: "Health",
+    },
+    {
+      id: "4",
+      title: "Championship team signs star player in record-breaking deal",
+      source: "Sports Network",
+      date: "3h ago",
+      summary: "In a surprising move, the defending champions have signed the league's top player for a record-breaking contract.",
+      url: "#",
+      imageUrl: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=200&h=200&auto=format&fit=crop",
+      category: "Sports",
+    },
+    {
+      id: "5",
+      title: "Microsoft announces major update to Windows operating system",
+      source: "Tech Daily",
+      date: "6h ago",
+      summary: "The upcoming Windows update includes significant UI changes and performance improvements.",
+      url: "#",
+      imageUrl: "https://images.unsplash.com/photo-1624571409108-e9e41146aa4b?q=80&w=200&h=200&auto=format&fit=crop",
+      category: "Technology",
+    },
+    {
+      id: "6",
+      title: "Electric vehicle sales surpass expectations in first quarter",
+      source: "Auto News",
+      date: "12h ago",
+      summary: "The shift towards electric vehicles has accelerated significantly, with sales exceeding analyst predictions by 30%.",
+      url: "#",
+      imageUrl: "https://images.unsplash.com/photo-1553260188-75a8d6205b6c?q=80&w=200&h=200&auto=format&fit=crop",
+      category: "Business",
+    },
+  ],
+};
