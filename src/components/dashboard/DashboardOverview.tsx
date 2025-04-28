@@ -1,9 +1,9 @@
-
 import { Grid } from "lucide-react";
 import WeatherWidget from "@/components/widgets/WeatherWidget";
 import FinanceWidget from "@/components/widgets/FinanceWidget";
 import NewsWidget from "@/components/widgets/NewsWidget";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { UserActivityChart } from "./UserActivityChart";
 
 const DashboardOverview = () => {
   return (
@@ -89,16 +89,7 @@ const DashboardOverview = () => {
           <NewsWidget />
         </div>
         <div className="md:col-span-2 lg:col-span-4">
-          <Card className="dashboard-card h-full">
-            <CardHeader className="dashboard-card-header">
-              <CardTitle className="dashboard-card-title">User Activity</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-[300px] flex items-center justify-center text-gray-500 dark:text-gray-400">
-                <p>Interactive user activity chart coming soon</p>
-              </div>
-            </CardContent>
-          </Card>
+          <UserActivityChart />
         </div>
       </div>
     </div>
