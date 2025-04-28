@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { mockNewsData } from "@/services/mockData";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 interface NewsItem {
   id: string;
@@ -108,7 +110,7 @@ const NewsWidget = () => {
               target="_blank" 
               rel="noopener noreferrer"
               key={article.id}
-              className="flex space-x-4 hover:bg-gray-50 dark:hover:bg-gray-800 p-2 rounded-md transition-colors"
+              className="flex space-x-4 hover:bg-gray-50 dark:hover:bg-gray-800 p-2 rounded-md transition-colors group"
             >
               <div className="w-20 h-20 bg-gray-200 dark:bg-gray-700 rounded-md overflow-hidden flex-shrink-0">
                 <img 
@@ -118,7 +120,10 @@ const NewsWidget = () => {
                 />
               </div>
               <div className="flex-1">
-                <h4 className="font-medium text-gray-900 dark:text-white line-clamp-2">{article.title}</h4>
+                <div className="flex justify-between items-start">
+                  <h4 className="font-medium text-gray-900 dark:text-white line-clamp-2">{article.title}</h4>
+                  <ExternalLink className="h-4 w-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                   {article.source} · {article.date}
                 </p>
@@ -129,9 +134,13 @@ const NewsWidget = () => {
             </a>
           ))}
           <div className="text-center pt-2">
-            <button className="text-sm text-primary-600 dark:text-primary-400 font-medium hover:underline">
-              View All News
-            </button>
+            <Button 
+              variant="link" 
+              onClick={() => window.open("https://news.google.com", "_blank")}
+              className="text-sm font-medium hover:underline flex items-center gap-1"
+            >
+              View All News <ExternalLink className="h-3 w-3" />
+            </Button>
           </div>
         </div>
       </CardContent>
